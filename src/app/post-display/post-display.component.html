@@ -1,0 +1,38 @@
+<mat-card class="post-card">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="expanded = true" (closed)="expanded = false">
+      <mat-expansion-panel-header class="mat-expansion-panel-header-height">
+        <mat-panel-title *ngIf="!expanded">
+          <div>
+            <mat-icon matSuffix matTooltip="{{post.author}}">person</mat-icon>
+            <mat-icon matSuffix matTooltip="{{post.location}}">location_on</mat-icon>
+            <mat-icon matSuffix matTooltip="{{unixTimeToDateAndTime(post.time)}}">access_time</mat-icon>
+          </div>
+          <div class="unexpanded-comment-text">{{post.text}}</div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-card-content>
+        <form [formGroup]="postForm">
+          <mat-form-field appearance="outline" class="input-spacer">
+            <input matInput class="active-input" placeholder="User Name" [formControl]="author">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="input-spacer">
+            <input matInput class="active-input" placeholder="User Location" [formControl]="location">
+            <mat-icon matSuffix>location_on</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="input-spacer">
+            <input matInput placeholder="User Location" class="disabled-input" [formControl]="time">
+            <mat-icon matSuffix>access_time</mat-icon>
+          </mat-form-field>
+          <button mat-flat-button color="primary" class="update-button form-button" [disabled]="!updateEnabled"
+                  (click)="updatePost()">Update
+          </button>
+        </form>
+      </mat-card-content>
+      <mat-card-content class="expanded-comment-text">
+        <h3>{{post.text}}</h3>
+      </mat-card-content>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>

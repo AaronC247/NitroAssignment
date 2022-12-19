@@ -1,0 +1,36 @@
+.post-card {
+  max-width: 70em;
+  margin-bottom: 2em;
+}
+
+.form-button {
+  margin-left: 0 !important;
+}
+
+:host .mat-mdc-card-content:last-child {
+  padding-bottom: 0;
+}
+
+:host .mat-mdc-card-content:first-child {
+  padding-top: 0;
+}
+
+.disabled-input {
+  color: black !important;
+}
+
+.input-spacer {
+  margin-right: 1em;
+}
+
+.expanded-comment-text {
+  padding: 0 0 10px 16px;
+}
+
+.unexpanded-comment-text {
+ padding-left: 1em;
+}
+
+.mat-expansion-panel-header-height {
+  height: 5em;
+}

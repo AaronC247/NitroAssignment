@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.material-icons {
+  vertical-align: -5px !important;
+}
+
+.update-button {
+  margin-left: 1em !important;
+  height: 48px !important;;
+}

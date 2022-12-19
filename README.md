@@ -1,27 +1,44 @@
-# PostsExcerise
+# Instructions 
 
+## Details
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Development server
+Recommend using [Node 18.12.1 LTS](https://nodejs.org/en/download/) to run node based server.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Set Up
 
-## Code scaffolding
+Make sure your terminal is in the **post-excerise** directory
+```console
+..\NitroAssignment\posts-excerise
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Once in the correct directory run npm install (or yarn equivalent) to install required dependencies
+```console
+npm install
+```
 
-## Build
+When the dependencies have finished installing you can run the application. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+First run the node server with the following command. The server will run on port 3000. If you need to change the port modify the port variable in the server.js file.
+```console
+npm run start:server
+```
 
-## Running unit tests
+To run the angular front end run the following command. The frontend will run on port 4200. If you need to change it you can change start:port script in the package.json and run that command.
+```console
+npm run start
+```
+or
+```console
+npm run start:port
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Angular CLI will output the URL to view the web app. Usually http://localhost:4200/
+```console
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Running Tests
+```console
+npm run test
+```
